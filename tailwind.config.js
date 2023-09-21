@@ -24,6 +24,7 @@ export default {
       'alert': 'rgb(255 84 89/1)',
       'offset': 'rgb(243 243 238/1)',
       'offsetPlus': 'rgb(232 232 227/1)',
+      'black/80': 'rgba(0,0,0,.8)',
     },
     fontFamily: {
       sans: ['Hanken Grotesk', 'Roboto', 'sans-serif'],

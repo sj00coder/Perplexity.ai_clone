@@ -14,10 +14,10 @@ function LinkButton({ href, text, externalLink, colorSuper }) {
 }
 
 LinkButton.propTypes = {
-  externalLink: PropTypes.boolean,
+  externalLink: PropTypes.bool,
   href: PropTypes.string,
   text: PropTypes.string,
-  colorSuper: PropTypes.boolean,
+  colorSuper: PropTypes.bool,
 };
 
 export default LinkButton;
