@@ -1,12 +1,11 @@
 import LeftPanel from '../components/homePage/LeftPanel';
+import MainSection from '../components/homePage/MainSection';
 
 const Home = () => {
   return (
     <div className='flex min-h-[100vh]'>
       <LeftPanel />
-      <aside className='lg:pr-sm lg:pb-sm lg:pt-sm grow'>
-        THis is right panel
-      </aside>
+      <MainSection />
     </div>
   );
 };
