@@ -20,21 +20,32 @@
 .svg-inline--fa {
   overflow: visible;
   box-sizing: content-box;
-  display: var(--fa-display,inline-block);
+  display: var(--fa-display, inline-block);
   height: 1em;
   overflow: visible;
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
 }
 
 .svg-inline--fa.fa-fw {
-  width: var(--fa-fw-width,1.25em);
+  width: var(--fa-fw-width, 1.25em);
 }
-
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
 .fa-fw {
   text-align: center;
   width: 1.25em;
 }
-
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
 .fa-1x {
   font-size: 1em;
+}
+svg:not(:host).svg-inline--fa,
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
 }
