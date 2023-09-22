@@ -10,9 +10,11 @@ import MobileScreenSVG from '../svg/MobileScreenSVG';
 import TwitterSVG from '../svg/TwitterSVG';
 import VerticalHistorySVG from '../svg/VerticalHistory';
 import NewThreadInput from '../NewThreadInput';
+import SignUpForm from '../forms/SignUpForm';
 
 function LeftPanel() {
   const [showNewThreadModal, setShowNewThreadModal] = useState(false);
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
   return (
     <>
       <aside className='hidden md:block border-borderMain/60 divide-borderMain/60 ring-borderMain bg-transparent'>
@@ -106,6 +108,7 @@ function LeftPanel() {
                   <button
                     type='button'
                     className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                    onClick={() => setShowSignUpModal(true)}
                   >
                     <div className='flex items-center leading-none justify-start gap-xs'>
                       <LoginSVG
@@ -123,6 +126,9 @@ function LeftPanel() {
               <button
                 type='button'
                 className='bg-super dark:bg-superDark dark:text-backgroundDark text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                onClick={() => {
+                  setShowSignUpModal(true);
+                }}
               >
                 <div className='flex items-center leading-none justify-center gap-xs'>
                   <div className='text-align-center relative'>Sign Up</div>
@@ -200,9 +206,19 @@ function LeftPanel() {
         </div>
       </aside>
       <Modal
+        key={1}
         showModal={showNewThreadModal}
         setShowModal={setShowNewThreadModal}
         content={<NewThreadInput />}
+        classes={'w-[90vw]'}
+      />
+      <Modal
+        key={2}
+        showModal={showSignUpModal}
+        setShowModal={setShowSignUpModal}
+        content={<SignUpForm />}
+        classes={'min-w-[600px]'}
+        closeButton={true}
       />
     </>
   );

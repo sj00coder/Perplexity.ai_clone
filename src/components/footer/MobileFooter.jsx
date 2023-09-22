@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import RightToBracketSVG from '../svg/RightToBracketSVG';
 import FooterLinks from './FooterLinks';
+import Modal from '../modal/Modal';
+import SignUpForm from '../forms/SignUpForm';
 
 function MobileFooter() {
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
   return (
     <>
       <div className='md:hidden left-0 fixed z-20 bottom-0 right-0 px-sm pb-sm border-t border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
@@ -9,6 +13,7 @@ function MobileFooter() {
           <button
             type='button'
             className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-sm px-sm font-medium h-8'
+            onClick={() => setShowSignUpModal(true)}
           >
             <div className='flex items-center leading-none justify-center gap-xs'>
               <RightToBracketSVG
@@ -26,6 +31,14 @@ function MobileFooter() {
           </div>
         </div>
       </div>
+      <Modal
+        key={2}
+        showModal={showSignUpModal}
+        setShowModal={setShowSignUpModal}
+        content={<SignUpForm />}
+        classes={'md:min-w-[600px]'}
+        closeButton={true}
+      />
     </>
   );
 }
