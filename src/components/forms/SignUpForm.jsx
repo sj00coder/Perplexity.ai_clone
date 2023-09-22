@@ -1,3 +1,5 @@
+import { signInWithGoogle } from '../../Firebase';
+
 function SignUpForm() {
   return (
     <div className='flex flex-col h-full'>
@@ -14,6 +16,7 @@ function SignUpForm() {
               <button
                 type='button'
                 className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                onClick={signInWithGoogle}
               >
                 <div className='flex items-center leading-none justify-center gap-xs'>
                   <svg

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from '../modal/Modal';
 import ArrowUpRight from '../svg/ArrowUpRightSVG';
 import DiscordSVG from '../svg/DiscordSVG';
@@ -11,10 +11,18 @@ import TwitterSVG from '../svg/TwitterSVG';
 import VerticalHistorySVG from '../svg/VerticalHistory';
 import NewThreadInput from '../NewThreadInput';
 import SignUpForm from '../forms/SignUpForm';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, logout } from '../../Firebase';
 
 function LeftPanel() {
   const [showNewThreadModal, setShowNewThreadModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
+  const [user, ,] = useAuthState(auth);
+
+  useEffect(() => {
+    setShowSignUpModal(false);
+    console.log(user);
+  }, [user]);
   return (
     <>
       <aside className='hidden md:block border-borderMain/60 divide-borderMain/60 ring-borderMain bg-transparent'>
@@ -220,6 +228,7 @@ function LeftPanel() {
         classes={'min-w-[600px]'}
         closeButton={true}
       />
+      <button onClick={logout}>SignOut</button>
     </>
   );
 }
