@@ -2,9 +2,8 @@ import { PropTypes } from 'prop-types';
 import LogoWithOutText from '../svg/LogoWithoutText';
 
 function Header({ nextButtonText, nextButtonAction, step }) {
-  console.log(nextButtonText);
   return (
-    <div className='pb-md border-b grid grid-cols-3 mb-lg border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+    <div className='xs:mt-md pb-md border-b grid grid-cols-3 mb-lg border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
       <div className='flex items-center gap-x-sm justify-start'>
         <div className=''>
           <div className='h-auto group  w-6 md:w-8'>

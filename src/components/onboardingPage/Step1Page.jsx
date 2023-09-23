@@ -1,5 +1,4 @@
 import { useAuthState } from 'react-firebase-hooks/auth';
-
 import EditSVG from '../svg/EditSVG';
 import { auth } from '../../Firebase';
 import { useState } from 'react';
@@ -7,7 +6,6 @@ import { useState } from 'react';
 function Step1Page() {
   const [user, ,] = useAuthState(auth);
   const [userName, setUserName] = useState(user?.displayName);
-  console.log(user);
   return (
     <>
       <div className='mb-lg space-y-xs'>

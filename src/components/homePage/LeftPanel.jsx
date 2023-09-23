@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Modal from '../modal/Modal';
+import { useNavigate } from 'react-router-dom';
 import ArrowUpRight from '../svg/ArrowUpRightSVG';
 import DiscordSVG from '../svg/DiscordSVG';
 import DiscoverSVG from '../svg/DiscoverSVG';
@@ -12,16 +13,17 @@ import VerticalHistorySVG from '../svg/VerticalHistory';
 import NewThreadInput from '../NewThreadInput';
 import SignUpForm from '../forms/SignUpForm';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth, logout } from '../../Firebase';
+import { auth } from '../../Firebase';
+import AiProfileSVG from '../svg/AiProfileSVG';
 
 function LeftPanel() {
   const [showNewThreadModal, setShowNewThreadModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
   const [user, ,] = useAuthState(auth);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setShowSignUpModal(false);
-    console.log(user);
   }, [user]);
   return (
     <>
@@ -96,6 +98,9 @@ function LeftPanel() {
                   <button
                     type='button'
                     className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                    onClick={() => {
+                      user ? navigate('/library') : setShowSignUpModal(true);
+                    }}
                   >
                     <div className='flex items-center leading-none justify-start gap-xs'>
                       <VerticalHistorySVG
@@ -111,38 +116,59 @@ function LeftPanel() {
                   New
                 </div>
               </div>
-              <div className='relative  gap-x-sm  w-full px-two  justify-center'>
-                <div className='px-sm md overflow-hidden transition duration-300 relative '>
-                  <button
-                    type='button'
-                    className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
-                    onClick={() => setShowSignUpModal(true)}
-                  >
-                    <div className='flex items-center leading-none justify-start gap-xs'>
-                      <LoginSVG
-                        classes={
-                          'svg-inline--fa fa-right-to-bracket fa-fw fa-1x '
-                        }
-                      />
-                      <div className='text-align-center relative'>Login</div>
-                    </div>
-                  </button>
+              {user ? (
+                <div className='relative  gap-x-sm  w-full px-two  justify-center'>
+                  <div className='px-sm md overflow-hidden transition duration-300 relative '>
+                    <a
+                      className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                      style={{ WebkitTapHighlightColor: 'transparent' }}
+                      href='/profile'
+                    >
+                      <div className='flex items-center leading-none justify-start gap-xs'>
+                        <AiProfileSVG classes='svg-inline--fa fa-circle-nodes fa-fw fa-1x ' />
+                        <div className='text-align-center relative'>
+                          AI Profile
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
+              ) : (
+                <div className='relative  gap-x-sm  w-full px-two  justify-center'>
+                  <div className='px-sm md overflow-hidden transition duration-300 relative '>
+                    <button
+                      type='button'
+                      className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                      onClick={() => setShowSignUpModal(true)}
+                    >
+                      <div className='flex items-center leading-none justify-start gap-xs'>
+                        <LoginSVG
+                          classes={
+                            'svg-inline--fa fa-right-to-bracket fa-fw fa-1x '
+                          }
+                        />
+                        <div className='text-align-center relative'>Login</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+            {!user && (
+              <div className='ml-md mt-md mr-md hidden md:block'>
+                <button
+                  type='button'
+                  className='bg-super dark:bg-superDark dark:text-backgroundDark text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                  onClick={() => {
+                    setShowSignUpModal(true);
+                  }}
+                >
+                  <div className='flex items-center leading-none justify-center gap-xs'>
+                    <div className='text-align-center relative'>Sign Up</div>
+                  </div>
+                </button>
               </div>
-            </div>
-            <div className='ml-md mt-md mr-md hidden md:block'>
-              <button
-                type='button'
-                className='bg-super dark:bg-superDark dark:text-backgroundDark text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
-                onClick={() => {
-                  setShowSignUpModal(true);
-                }}
-              >
-                <div className='flex items-center leading-none justify-center gap-xs'>
-                  <div className='text-align-center relative'>Sign Up</div>
-                </div>
-              </button>
-            </div>
+            )}
           </div>
           <div className='flex flex-col'>
             <div className='px-md pb-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
@@ -175,6 +201,30 @@ function LeftPanel() {
                 </div>
               </div>
             </div>
+            {user && (
+              <a href='/settings'>
+                <div className='px-sm py-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+                  <div className='flex  items-center rounded-full gap-x-sm py-xs pl-sm pr-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark transition duration-300 bg-transparent md:hover:bg-offsetPlus md:dark:hover:bg-offsetPlusDark'>
+                    <div className='relative'>
+                      <div className='aspect-square rounded-full overflow-hidden flex items-center justify-center  w-8 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlus dark:bg-offsetPlusDark'>
+                        <img
+                          alt='User avatar'
+                          className='w-full h-auto'
+                          src={user?.photoURL}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div className='flex items-center gap-x-xs relative'>
+                        <div className='line-clamp-1 break-all default font-sans text-sm font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+                          {user.displayName}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            )}
             <div className='flex items-center gap-x-xs my-sm pt-sm px-sm border-t border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
               <div>
                 <button
@@ -228,7 +278,6 @@ function LeftPanel() {
         classes={'min-w-[600px]'}
         closeButton={true}
       />
-      <button onClick={logout}>SignOut</button>
     </>
   );
 }

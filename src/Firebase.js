@@ -23,7 +23,9 @@ const provider = new GoogleAuthProvider();
 export const signInWithGoogle = () => {
   signInWithPopup(auth, provider)
     .then((result) => {
-      console.log(getAdditionalUserInfo(result).isNewUser);
+      if (getAdditionalUserInfo(result).isNewUser)
+        window.location.href =
+          '/onboarding?redirect=https://www.perplexity.ai/';
     })
     .catch((error) => {
       console.log(error);

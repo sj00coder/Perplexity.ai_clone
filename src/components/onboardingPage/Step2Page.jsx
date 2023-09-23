@@ -82,7 +82,7 @@ function Step2Page() {
                 </div>
               </div>
             </div>
-            <div className='p-md border rounded flex flex-col mt-md border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+            <div className='xs:mb-[64px] p-md border rounded flex flex-col mt-md border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
               <div className='flex-grow'>
                 <div className='relative mb-sm'>
                   <div className='super text-[11px] font-bold tracking-wide font-mono leading-none uppercase text-super dark:text-superDark selection:bg-superDuper selection:text-textMain'>
