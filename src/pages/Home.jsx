@@ -1,10 +1,10 @@
-import LeftPanel from '../components/homePage/LeftPanel';
 import MainSection from '../components/homePage/MainSection';
+import SideNav from '../components/sideNav/SideNav';
 
 const Home = () => {
   return (
     <div className='flex min-h-[100vh]'>
-      <LeftPanel />
+      <SideNav selectedNav='Home' />
       <MainSection />
     </div>
   );

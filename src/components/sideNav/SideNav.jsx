@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { PropTypes } from 'prop-types';
+
 import Modal from '../modal/Modal';
 import { useNavigate } from 'react-router-dom';
 import ArrowUpRight from '../svg/ArrowUpRightSVG';
@@ -16,7 +18,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../Firebase';
 import AiProfileSVG from '../svg/AiProfileSVG';
 
-function LeftPanel() {
+function SideNav({ selectedNav }) {
   const [showNewThreadModal, setShowNewThreadModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
   const [user, ,] = useAuthState(auth);
@@ -65,7 +67,9 @@ function LeftPanel() {
               <div className='relative  gap-x-sm  w-full px-two  justify-center'>
                 <div className='px-sm md overflow-hidden transition duration-300 relative  flex items-center'>
                   <a
-                    className='md:hover:bg-offsetPlus text-textMain dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                    className={`md:hover:bg-offsetPlus ${
+                      selectedNav === 'Home' ? 'text-textMain' : 'text-textOff'
+                    } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                     style={{ WebkitTapHighlightColor: 'transparent' }}
                     href='/'
                   >
@@ -80,7 +84,11 @@ function LeftPanel() {
               <div className='relative  gap-x-sm  w-full px-two  justify-center'>
                 <div className='px-sm md overflow-hidden transition duration-300 relative '>
                   <a
-                    className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                    className={`md:hover:bg-offsetPlus ${
+                      selectedNav === 'Discover'
+                        ? 'text-textMain'
+                        : 'text-textOff'
+                    } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                     style={{ WebkitTapHighlightColor: 'transparent' }}
                     href='/discover'
                   >
@@ -97,7 +105,11 @@ function LeftPanel() {
                 <div className='px-sm md overflow-hidden transition duration-300 relative '>
                   <button
                     type='button'
-                    className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                    className={`md:hover:bg-offsetPlus ${
+                      selectedNav === 'Library'
+                        ? 'text-textMain'
+                        : 'text-textOff'
+                    } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                     onClick={() => {
                       user ? navigate('/library') : setShowSignUpModal(true);
                     }}
@@ -120,7 +132,11 @@ function LeftPanel() {
                 <div className='relative  gap-x-sm  w-full px-two  justify-center'>
                   <div className='px-sm md overflow-hidden transition duration-300 relative '>
                     <a
-                      className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                      className={`md:hover:bg-offsetPlus ${
+                        selectedNav === 'AI Profile'
+                          ? 'text-textMain'
+                          : 'text-textOff'
+                      } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                       style={{ WebkitTapHighlightColor: 'transparent' }}
                       href='/profile'
                     >
@@ -282,4 +298,7 @@ function LeftPanel() {
   );
 }
 
-export default LeftPanel;
+SideNav.propTypes = {
+  selectedNav: PropTypes.string,
+};
+export default SideNav;
