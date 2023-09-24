@@ -3,7 +3,7 @@ import ArrowRightToArcSVG from '../svg/ArrowRightToArc';
 import MobileFooter from '../footer/MobileFooter';
 import QueryButton from '../buttons/QueryButton';
 import Footer from '../footer/Footer';
-import Header from './header';
+import Header from './Header';
 
 const queryButtons = [
   { text: 'history of Argentina', href: '/search?q=history%20of%20Argentina' },
