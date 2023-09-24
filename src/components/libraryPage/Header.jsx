@@ -2,7 +2,7 @@ import LayerGroupSVG from '../svg/LayerGroup';
 import MagnifingGlassSVG from '../svg/MaginfingGlassSVG';
 import VerticalHistorySVG from '../svg/VerticalHistory';
 import LinerColumnSVG from '../svg/LineColumns';
-import Tabs from '../tabs/tabs';
+import Tabs from '../tabs/Tabs';
 import { useState } from 'react';
 
 function Header() {
