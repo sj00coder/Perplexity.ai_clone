@@ -20,6 +20,7 @@ export default {
       'textMainDark': 'rgb(232 232 230/1)',
       'transparent': 'transparent',
       'background': 'rgb(252 252 249/1)',
+      'background2': 'rgb(243, 243, 238)',
       'textOff': 'rgb(100 100 95/1)',
       'white': 'rgb(255 255 255/1)',
       'alert': 'rgb(255 84 89/1)',

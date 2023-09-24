@@ -4,6 +4,9 @@ import MobileFooter from '../footer/MobileFooter';
 import QueryButton from '../buttons/QueryButton';
 import Footer from '../footer/Footer';
 import Header from './Header';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../Firebase';
+import Loader from '../Loader';
 
 const queryButtons = [
   { text: 'history of Argentina', href: '/search?q=history%20of%20Argentina' },
@@ -33,13 +36,16 @@ const queryButtons = [
   },
 ];
 function MainSection() {
-  return (
+  const [user, loading] = useAuthState(auth);
+  return loading ? (
+    <Loader />
+  ) : (
     <aside className='lg:pr-sm lg:pb-sm lg:pt-sm grow'>
       <div className='lg:rounded-lg shadow-sm md:dark:border h-full overflow-clip bg-clip-border border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
         <div className='h-full'>
           <div className='w-full mx-auto  max-w-screen-md md:px-lg  px-md h-full'>
             <div className='relative h-full flex flex-col'>
-              <Header />
+              <Header user={user} />
               <div className='w-full h-full grow flex items-center -mt-2xl md:mt-0 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
                 <div className='mb-lg md:mb-xl w-full'>
                   <div className='md:text-center mb-lg pb-xs flex items-center justify-center default text-base text-textMain selection:bg-superDuper selection:text-textMain'>
@@ -75,7 +81,7 @@ function MainSection() {
           </div>
         </div>
       </div>
-      <MobileFooter />
+      <MobileFooter user={user} selectedNav='Home' />
     </aside>
   );
 }

@@ -1,7 +1,8 @@
+import { PropTypes } from 'prop-types';
 import AndroidSVG from '../svg/AndroidSVG';
 import LogoSVG from '../svg/LogoSVG';
 
-function Header() {
+function Header({ user }) {
   return (
     <div className='md:hidden border-b py-lg flex items-center justify-between border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
       <div className='h-auto group w-40 md:w-52'>
@@ -18,9 +19,28 @@ function Header() {
             <div className='text-align-center relative'>Get App</div>
           </div>
         </a>
+        {user ? (
+          <a href='/settings'>
+            <div className='relative'>
+              <div className='aspect-square rounded-full overflow-hidden flex items-center justify-center  w-8 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlus dark:bg-offsetPlusDark'>
+                <img
+                  alt='User avatar'
+                  className='w-full h-auto'
+                  src={user?.photoURL}
+                />
+              </div>
+            </div>
+          </a>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );
 }
+
+Header.propTypes = {
+  user: PropTypes.object,
+};
 
 export default Header;

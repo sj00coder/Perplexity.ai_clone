@@ -1,10 +1,17 @@
+import { useAuthState } from 'react-firebase-hooks/auth';
+import MobileFooter from '../footer/MobileFooter';
 import EllipsisSVG from '../svg/EllipsisSVG';
 import GridSVG from '../svg/GridSVG';
 import LayerGroupSVG from '../svg/LayerGroup';
+import Loader from '../Loader';
 import PlusSVG from '../svg/PlusSVG';
+import { auth } from '../../Firebase';
 
 function MainSection() {
-  return (
+  const [user, loading] = useAuthState(auth);
+  return loading ? (
+    <Loader />
+  ) : (
     <div className='w-full h-full mx-auto  max-w-screen-xl md:px-xl  px-md'>
       <div className='lg:grid grid-cols-12 gap-xl '>
         <div className='col-span-8 lg:mt-lg'>
@@ -169,6 +176,7 @@ function MainSection() {
           </div>
         </div>
       </div>
+      <MobileFooter user={user} selectedNav='Library' />
     </div>
   );
 }
