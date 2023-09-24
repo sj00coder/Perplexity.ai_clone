@@ -1,8 +1,21 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import ArrowRightSVG from './svg/ArrowRightSVG';
 import CirclePlusSVG from './svg/CirclePlusSVG';
 import MagnifingGlassSVG from './svg/MaginfingGlassSVG';
+import { submitSearchQuery } from '../utils/searchQuery';
 
 function NewThreadInput() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  function onSubmit() {
+    if (!searchQuery) return;
+    const result = submitSearchQuery(searchQuery);
+    navigate(`/search/${result}`);
+  }
+
   return (
     <div className='grow rounded-md relative flex items-center'>
       <div className='w-full outline-none focus:outline-none focus:ring-borderMain font-sans flex items-center selection:bg-superDuper selection:text-textMain bg-background border text-textMain border-borderMain focus:ring-1 placeholder-textOff shadow-sm rounded-t-md rounded-b-md text-base p-md pb-xl'>
@@ -11,6 +24,8 @@ function NewThreadInput() {
           className='overflow-auto max-h-[50vh] outline-none w-full flex items-center font-sans caret-superDuper resize-none selection:bg-superDuper selection:text-textMain bg-background text-textMain placeholder-textOff'
           autoComplete='off'
           style={{ height: '48px !important' }}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         ></textarea>
       </div>
       <div
@@ -62,7 +77,7 @@ function NewThreadInput() {
           >
             <div className='flex items-center leading-none justify-center gap-xs'>
               <div>
-                <div className='rounded-full  p-three border  transition duration-300 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+                <div className='rounded-full  p-[3px] border  transition duration-300 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
                   <div className='relative w-8 transition duration-200 ease-in-out'>
                     <div className='rounded-full h-4 w-4 transition-all duration-300 ease-in-out shadow-sm md:group-hover:scale-90 ml-0 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlus dark:bg-offsetPlusDark'></div>
                   </div>
@@ -73,7 +88,16 @@ function NewThreadInput() {
           </button>
           <button
             type='button'
-            className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+            className={`${
+              !searchQuery ? 'bg-offsetPlus' : 'bg-super'
+            } dark:bg-offsetPlusDark ${
+              !searchQuery ? 'text-textMain' : 'text-white'
+            } dark:text-textMainDark  ${
+              searchQuery
+                ? 'hover:opacity-80'
+                : 'md:hover:text-textOff md:dark:hover:text-textOffDark'
+            } focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8`}
+            onClick={onSubmit}
           >
             <div className='flex items-center leading-none justify-center gap-xs'>
               <ArrowRightSVG

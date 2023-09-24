@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 import Modal from '../modal/Modal';
-import { useNavigate } from 'react-router-dom';
 import ArrowUpRight from '../svg/ArrowUpRightSVG';
 import DiscordSVG from '../svg/DiscordSVG';
 import DiscoverSVG from '../svg/DiscoverSVG';
@@ -17,17 +17,20 @@ import SignUpForm from '../forms/SignUpForm';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../Firebase';
 import AiProfileSVG from '../svg/AiProfileSVG';
+import Loader from '../Loader';
 
 function SideNav({ selectedNav }) {
   const [showNewThreadModal, setShowNewThreadModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
-  const [user, ,] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
   useEffect(() => {
     setShowSignUpModal(false);
   }, [user]);
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <>
       <aside className='hidden md:block border-borderMain/60 divide-borderMain/60 ring-borderMain bg-transparent'>
         <div className='w-[220px] h-full pt-[12px] pb-sm sticky top-0 flex justify-between flex-col h-full'>
@@ -233,7 +236,7 @@ function SideNav({ selectedNav }) {
                     <div>
                       <div className='flex items-center gap-x-xs relative'>
                         <div className='line-clamp-1 break-all default font-sans text-sm font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
-                          {user.displayName}
+                          {user?.displayName}
                         </div>
                       </div>
                     </div>
@@ -300,5 +303,6 @@ function SideNav({ selectedNav }) {
 
 SideNav.propTypes = {
   selectedNav: PropTypes.string,
+  user: PropTypes.object,
 };
 export default SideNav;

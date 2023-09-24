@@ -17,6 +17,7 @@ export default {
       'super': '#20808d',
       'superDuper': 'rgb(31 184 205/1)',
       'textMain': '#13343b',
+      'textMainDark': 'rgb(232 232 230/1)',
       'transparent': 'transparent',
       'background': 'rgb(252 252 249/1)',
       'textOff': 'rgb(100 100 95/1)',
@@ -24,7 +25,9 @@ export default {
       'alert': 'rgb(255 84 89/1)',
       'offset': 'rgb(243 243 238/1)',
       'offsetPlus': 'rgb(232 232 227/1)',
+      'offsetPlusDark': 'rgb(51 51 49/1)',
       'black/80': 'rgba(0,0,0,.8)',
+      'superAlt': 'rgb(168 75 47/1)',
     },
     fontFamily: {
       sans: ['Hanken Grotesk', 'Roboto', 'sans-serif'],

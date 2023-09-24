@@ -1,6 +1,6 @@
 import { useRouteError } from 'react-router-dom';
-
-export default function ErrorPage() {
+import { PropTypes } from 'prop-types';
+export default function ErrorPage({ errorMessage }) {
   const error = useRouteError();
   console.error(error);
 
@@ -10,9 +10,15 @@ export default function ErrorPage() {
         <h1 className='text-2xl font-bold'>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>
         <p className='mt-3'>
-          <i className='text-orange'>{error.statusText || error.message}</i>
+          <i className='text-orange'>
+            {errorMessage || error.statusText || error.message}
+          </i>
         </p>
       </div>
     </div>
   );
 }
+
+ErrorPage.propTypes = {
+  errorMessage: PropTypes.string,
+};

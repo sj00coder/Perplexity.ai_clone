@@ -33,7 +33,7 @@ function Tabs({ tabElments, slectedTab, setSelectedTab }) {
 }
 
 Tabs.propTypes = {
-  tabElments: PropTypes.Object,
+  tabElments: PropTypes.array,
   slectedTab: PropTypes.string,
   setSelectedTab: PropTypes.func,
 };
