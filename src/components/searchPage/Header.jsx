@@ -3,7 +3,7 @@ import Avatar from '../Avatar';
 import LikeButton from '../buttons/LikeButton';
 function Header({ user }) {
   return (
-    <div className='md:rounded-t-xl sticky left-0 right-0 top-0 md:mb-0 z-[15] border-b border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
+    <div className='md:rounded-t-xl sticky left-0 right-0 top-0 md:mb-0 z-[15] border-b border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '>
       <div className='flex items-center justify-between gap-x-md md:min-h-[53px] py-sm px-md'>
         <div className='hidden md:block'>
           <div className='flex items-center gap-x-md'>
@@ -23,43 +23,43 @@ function Header({ user }) {
                 >
                   <path
                     d='M188.522 11.1777L112.561 87.207H188.522V11.1777Z'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
                   <path
                     d='M112.562 87.207L36.5957 11.1777V87.207H112.562Z'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
                   <path
                     d='M112.396 0L112.395 288'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
                   <path
                     d='M188.522 163.232L112.561 87.2031V196.201L188.522 272.231V163.232Z'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
                   <path
                     d='M36.5957 163.232L112.562 87.2031V196.201L36.5957 272.231V163.232Z'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
                   <path
                     d='M4 87.2031V195.764H36.5949V163.232L112.561 87.2031H4Z'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
                   <path
                     d='M112.561 87.2031L188.522 163.232V195.764H221.122V87.2031H112.561Z'
-                    className='stroke-textMain dark:stroke-textMainDark'
+                    className='stroke-textMain '
                     strokeWidth='9'
                     strokeMiterlimit='9'
                   ></path>
@@ -68,7 +68,7 @@ function Header({ user }) {
             </div>
           </a>
           <a
-            className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+            className='bg-offsetPlus  text-textMain   md:hover:text-textOff  font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
             href='/'
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
@@ -95,7 +95,7 @@ function Header({ user }) {
         <div className='grow max-w-md text-center hidden md:flex items-center gap-x-xs justify-center'>
           <div>
             <div>
-              <div className='flex items-center gap-x-xs cursor-pointer hover:opacity-70 duration-300 transition line-clamp-1 px-sm py-xs select-none light font-sans text-sm font-medium text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+              <div className='flex items-center gap-x-xs cursor-pointer hover:opacity-70 duration-300 transition line-clamp-1 px-sm py-xs select-none light font-sans text-sm font-medium text-textOff  selection:bg-superDuper selection:text-textMain'>
                 <div>
                   <svg
                     aria-hidden='true'
@@ -117,7 +117,7 @@ function Header({ user }) {
               </div>
             </div>
           </div>
-          <div className='light font-sans text-sm font-medium text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+          <div className='light font-sans text-sm font-medium text-textOff  selection:bg-superDuper selection:text-textMain'>
             <svg
               aria-hidden='true'
               focusable='false'
@@ -136,7 +136,7 @@ function Header({ user }) {
           </div>
           <span>
             <span className='cursor-pointer hover:opacity-70 transition duration-300'>
-              <div className='px-sm py-sm  light font-sans text-sm font-medium text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+              <div className='px-sm py-sm  light font-sans text-sm font-medium text-textOff  selection:bg-superDuper selection:text-textMain'>
                 <span className='line-clamp-1'>Untitled</span>
               </div>
             </span>
@@ -147,7 +147,7 @@ function Header({ user }) {
             <div>
               <button
                 type='button'
-                className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+                className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
               >
                 <div className='flex items-center leading-none justify-center gap-xs'>
                   <svg
@@ -174,7 +174,7 @@ function Header({ user }) {
               <div>
                 <button
                   type='button'
-                  className='bg-super dark:bg-superDark dark:text-backgroundDark text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+                  className='bg-super   text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
                 >
                   <div className='flex items-center leading-none justify-center gap-xs'>
                     <svg

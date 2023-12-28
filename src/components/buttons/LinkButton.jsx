@@ -5,7 +5,7 @@ function LinkButton({ href, text, externalLink, colorSuper }) {
       <div
         className={`hover:underline font-sans text-sm ${
           colorSuper ? 'text-super' : 'text-textOff'
-        } dark:text-superDark selection:bg-superDuper selection:text-textMain`}
+        }  selection:bg-superDuper selection:text-textMain`}
       >
         {text}
       </div>

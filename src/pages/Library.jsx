@@ -7,7 +7,7 @@ function Library() {
     <div className='flex min-h-[100vh]'>
       <SideNav selectedNav='Library' />
       <div className='lg:pr-sm lg:pb-sm lg:pt-sm grow'>
-        <div className='lg:rounded-lg shadow-sm md:dark:border h-full overflow-clip bg-clip-border border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
+        <div className='lg:rounded-lg shadow-sm  h-full overflow-clip bg-clip-border border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '>
           <div className='h-full'>
             <Header />
             <MainSection />

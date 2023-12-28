@@ -4,18 +4,18 @@ function SignUpForm() {
   return (
     <div className='flex flex-col h-full'>
       <div className='py-md px-md md:px-xl grow md:pt-xl md:pb-xl'>
-        <div className='text-center super font-display text-4xl md:text-6xl text-super dark:text-superDark selection:bg-superDuper selection:text-textMain'>
+        <div className='text-center super font-display text-4xl md:text-6xl text-super  selection:bg-superDuper selection:text-textMain'>
           Welcome
         </div>
         <div className=''>
-          <div className='text-center mt-sm default font-sans text-base text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+          <div className='text-center mt-sm default font-sans text-base text-textMain  selection:bg-superDuper selection:text-textMain'>
             Sign in or sign up to continue
           </div>
           <div className='max-w-sm mx-auto mt-lg'>
             <div className=' space-y-sm'>
               <button
                 type='button'
-                className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                className='bg-offsetPlus  text-textMain   md:hover:text-textOff  font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
                 onClick={signInWithGoogle}
               >
                 <div className='flex items-center leading-none justify-center gap-xs'>
@@ -41,7 +41,7 @@ function SignUpForm() {
               </button>
               <button
                 type='button'
-                className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                className='bg-offsetPlus  text-textMain   md:hover:text-textOff  font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
               >
                 <div className='flex items-center leading-none justify-center gap-xs'>
                   <svg
@@ -65,26 +65,26 @@ function SignUpForm() {
                 </div>
               </button>
             </div>
-            <div className='border-t mt-md pt-md space-y-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+            <div className='border-t mt-md pt-md space-y-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
               <div>
                 <div className='rounded-full'>
                   <div className='relative flex items-center'>
                     <input
                       type='email'
                       placeholder='henry@example.com'
-                      className='w-full outline-none focus:outline-none focus:ring-borderMain font-sans flex items-center dark:bg-offsetDark dark:text-textMainDark dark:placeholder-textOffDark dark:border-borderMainDark dark:focus:ring-borderMainDark selection:bg-superDuper selection:text-textMain duration-200 transition-all bg-background border text-textMain border-borderMain focus:ring-1 placeholder-textOff rounded-t-[32px] rounded-b-[32px] py-sm text-sm px-md pr-md'
+                      className='w-full outline-none focus:outline-none focus:ring-borderMain font-sans flex items-center selection:bg-superDuper selection:text-textMain duration-200 transition-all bg-background border text-textMain border-borderMain focus:ring-1 placeholder-textOff rounded-t-[32px] rounded-b-[32px] py-sm text-sm px-md pr-md'
                       autoComplete='off'
                       value=''
                     />
                     <div></div>
-                    <div className='absolute flex items-center gap-sm bg-background dark:bg-offsetDark rounded-full right-sm'></div>
+                    <div className='absolute flex items-center gap-sm bg-background  rounded-full right-sm'></div>
                   </div>
                 </div>
               </div>
               <div className='flex justify-center'>
                 <button
                   type='button'
-                  className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+                  className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
                 >
                   <div className='flex items-center leading-none justify-center gap-xs'>
                     <div className='text-align-center relative'>

@@ -2,11 +2,11 @@ import { PropTypes } from 'prop-types';
 
 function Avatar({ photoUrl, displayName }) {
   return (
-    <div className=' rounded-full border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+    <div className=' rounded-full border-borderMain/60 divide-borderMain/60  ring-borderMain  bg-transparent'>
       <div className='flex items-center gap-x-xs relative'>
         <div className='relative'>
-          <div className='aspect-square rounded-full overflow-hidden flex items-center justify-center  w-5 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlus dark:bg-offsetPlusDark'>
-            <div className='light font-sans text-base text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+          <div className='aspect-square rounded-full overflow-hidden flex items-center justify-center  w-5 border-borderMain/60 divide-borderMain/60  ring-borderMain  bg-offsetPlus '>
+            <div className='light font-sans text-base text-textOff  selection:bg-superDuper selection:text-textMain'>
               {photoUrl ? (
                 <img
                   alt='User avatar'
@@ -33,7 +33,7 @@ function Avatar({ photoUrl, displayName }) {
             </div>
           </div>
         </div>
-        <div className='line-clamp-1 break-all default font-sans text-sm font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+        <div className='line-clamp-1 break-all default font-sans text-sm font-medium text-textMain selection:bg-superDuper selection:text-textMain'>
           {displayName || 'Anonymous'}
         </div>
       </div>

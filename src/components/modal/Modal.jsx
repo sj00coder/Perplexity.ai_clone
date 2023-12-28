@@ -18,7 +18,7 @@ function Modal({ showModal, setShowModal, content, classes, closeButton }) {
           >
             <div className='animate-in fade-in zoom-in-95 duration-300 z-100'>
               <div
-                className={`${classes} max-w-screen-md p-md md:rounded-xl shadow-md relative border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offset dark:bg-offsetDark`}
+                className={`${classes} max-w-screen-md p-md md:rounded-xl shadow-md relative border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offset `}
                 onClick={handleModalChildClick}
               >
                 {closeButton && (

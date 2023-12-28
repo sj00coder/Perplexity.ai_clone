@@ -1,10 +1,10 @@
 function AnswerSection() {
   return (
     <>
-      <div className='flex items-center justify-between border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
+      <div className='flex items-center justify-between border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '>
         <div className='flex items-center justify-between w-full mb-sm'>
           <div color='super' className='space-x-sm flex items-center '>
-            <h2 className='default font-display text-lg font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+            <h2 className='default font-display text-lg font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
               <svg
                 aria-hidden='true'
                 focusable='false'
@@ -21,16 +21,16 @@ function AnswerSection() {
                 ></path>
               </svg>
             </h2>
-            <h2 className='default font-display text-lg font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+            <h2 className='default font-display text-lg font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
               Answer
             </h2>
           </div>
         </div>
       </div>
-      <div className='relative default font-sans text-base text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+      <div className='relative default font-sans text-base text-textMain  selection:bg-superDuper selection:text-textMain'>
         <div className='break-words min-w-0 [word-break:break-word]'>
           <div dir='auto'>
-            <div className='prose dark:prose-invert inline leading-normal break-words min-w-0 [word-break:break-word]'>
+            <div className='prose  inline leading-normal break-words min-w-0 [word-break:break-word]'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               eu libero lacinia, dapibus neque ac, consequat velit. Vestibulum
               quis nulla et massa congue blandit dictum non nisl. Curabitur eu
@@ -63,7 +63,7 @@ function AnswerSection() {
         <div className=''>
           <button
             type='button'
-            className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+            className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
           >
             <div className='flex items-center leading-none justify-center gap-xs'>
               <svg
@@ -87,11 +87,11 @@ function AnswerSection() {
         </div>
         <button
           type='button'
-          className='text-textOff dark:text-textOffDark md:hover:bg-offsetPlus dark:md:hover:bg-offsetPlusDark  md:hover:text-superAlt font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+          className='text-textOff  md:hover:bg-offsetPlus   md:hover:text-superAlt font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
         >
           <div className='pointer-events-none absolute z-30  opacity-0 shadow-sm transition-all delay-200 duration-200 group-hover:translate-y-0 group-hover:translate-x-0  group-hover:opacity-100 bottom-[120%] translate-y-1'>
-            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlusDark'>
-              <div className='default font-sans text-xs font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offsetPlusDark'>
+              <div className='default font-sans text-xs font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                 <span className='text-textMainDark'>Not Accurate</span>
               </div>
             </div>
@@ -116,11 +116,11 @@ function AnswerSection() {
         </button>
         <button
           type='button'
-          className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+          className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
         >
           <div className='pointer-events-none absolute z-30  opacity-0 shadow-sm transition-all delay-200 duration-200 group-hover:translate-y-0 group-hover:translate-x-0  group-hover:opacity-100 bottom-[120%] translate-y-1'>
-            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlusDark'>
-              <div className='default font-sans text-xs font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offsetPlusDark'>
+              <div className='default font-sans text-xs font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                 <span className='text-textMainDark'>View Sources</span>
               </div>
             </div>
@@ -145,11 +145,11 @@ function AnswerSection() {
         </button>
         <button
           type='button'
-          className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+          className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
         >
           <div className='pointer-events-none absolute z-30  opacity-0 shadow-sm transition-all delay-200 duration-200 group-hover:translate-y-0 group-hover:translate-x-0  group-hover:opacity-100 bottom-[120%] translate-y-1'>
-            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlusDark'>
-              <div className='default font-sans text-xs font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offsetPlusDark'>
+              <div className='default font-sans text-xs font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                 <span className='text-textMainDark'>Copy To Clipboard</span>
               </div>
             </div>
@@ -174,11 +174,11 @@ function AnswerSection() {
         </button>
         <button
           type='button'
-          className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+          className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
         >
           <div className='pointer-events-none absolute z-30  opacity-0 shadow-sm transition-all delay-200 duration-200 group-hover:translate-y-0 group-hover:translate-x-0  group-hover:opacity-100 bottom-[120%] translate-y-1'>
-            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlusDark'>
-              <div className='default font-sans text-xs font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+            <div className='py-xs px-sm rounded flex items-center gap-x-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offsetPlusDark'>
+              <div className='default font-sans text-xs font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                 <span className='text-textMainDark'>Edit Query</span>
               </div>
             </div>

@@ -46,9 +46,9 @@ function SourceSection() {
     },
   ];
   return (
-    <div className='mb-lg border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+    <div className='mb-lg border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
       <div className='flex items-center'>
-        <h2 className='flex items-center gap-x-sm default font-display text-lg font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+        <h2 className='flex items-center gap-x-sm default font-display text-lg font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
           <svg
             aria-hidden='true'
             focusable='false'
@@ -69,16 +69,16 @@ function SourceSection() {
       </div>
       <div className='space-y-sm mt-md'>
         <div className=''>
-          <div className='taco flex items-center gap-x-xs border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+          <div className='taco flex items-center gap-x-xs border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
             <div className='rounded-full'>
-              <div className='default font-sans text-sm font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'></div>
+              <div className='default font-sans text-sm font-medium text-textMain  selection:bg-superDuper selection:text-textMain'></div>
             </div>
             <div></div>
           </div>
-          <div className='grow default font-sans text-sm text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+          <div className='grow default font-sans text-sm text-textMain  selection:bg-superDuper selection:text-textMain'>
             <div>
-              <div className='border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
-                <div className='flex items-center justify-between border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'></div>
+              <div className='border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
+                <div className='flex items-center justify-between border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '></div>
                 <div className='grid grid-cols-2 gap-sm md:grid-cols-4'>
                   {sources.map((item, index) => (
                     <a

@@ -29,15 +29,15 @@ function NewThreadInput() {
         ></textarea>
       </div>
       <div
-        className='absolute m-[1px] bottom-0 flex justify-between px-[6px] bg-background focus:bg-background dark:bg-offsetDark dark:focus:bg-offsetDark rounded-b-md '
+        className='absolute m-[1px] bottom-0 flex justify-between px-[6px] bg-background focus:bg-background rounded-b-md '
         style={{ width: 'calc(100% - 2px)' }}
       >
-        <div className='absolute flex items-center bg-background dark:bg-offsetDark rounded-t-lg bottom-0 pb-xs mb-xs left-[6px] left-sm'>
+        <div className='absolute flex items-center bg-background  rounded-t-lg bottom-0 pb-xs mb-xs left-[6px] left-sm'>
           <div className=''>
             <span>
               <button
                 type='button'
-                className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+                className='md:hover:bg-offsetPlus text-textOff md:hover:text-textMain font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
               >
                 <div className='flex items-center leading-none justify-center gap-xs max-w-[120px]'>
                   <MagnifingGlassSVG
@@ -53,7 +53,7 @@ function NewThreadInput() {
           <div>
             <button
               type='button'
-              className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+              className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
             >
               <div className='flex items-center leading-none justify-center gap-xs'>
                 <CirclePlusSVG
@@ -70,16 +70,16 @@ function NewThreadInput() {
             />
           </div>
         </div>
-        <div className='absolute flex items-center gap-sm bg-background dark:bg-offsetDark rounded-full right-sm bottom-0 pb-xs mb-xs'>
+        <div className='absolute flex items-center gap-sm bg-background  rounded-full right-sm bottom-0 pb-xs mb-xs'>
           <button
             type='button'
-            className='   text-textOff dark:text-textOffDark md:hover:text-textMain  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+            className='   text-textOff  md:hover:text-textMain   font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
           >
             <div className='flex items-center leading-none justify-center gap-xs'>
               <div>
-                <div className='rounded-full  p-[3px] border  transition duration-300 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+                <div className='rounded-full  p-[3px] border  transition duration-300 border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
                   <div className='relative w-8 transition duration-200 ease-in-out'>
-                    <div className='rounded-full h-4 w-4 transition-all duration-300 ease-in-out shadow-sm md:group-hover:scale-90 ml-0 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlus dark:bg-offsetPlusDark'></div>
+                    <div className='rounded-full h-4 w-4 transition-all duration-300 ease-in-out shadow-sm md:group-hover:scale-90 ml-0 border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offsetPlus '></div>
                   </div>
                 </div>
               </div>
@@ -90,12 +90,12 @@ function NewThreadInput() {
             type='button'
             className={`${
               !searchQuery ? 'bg-offsetPlus' : 'bg-super'
-            } dark:bg-offsetPlusDark ${
+            }  ${
               !searchQuery ? 'text-textMain' : 'text-white'
-            } dark:text-textMainDark  ${
+            }   ${
               searchQuery
                 ? 'hover:opacity-80'
-                : 'md:hover:text-textOff md:dark:hover:text-textOffDark'
+                : 'md:hover:text-textOff '
             } focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8`}
             onClick={onSubmit}
           >

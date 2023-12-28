@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 function Tabs({ tabElments, slectedTab, setSelectedTab }) {
   return (
-    <div className='h-14 lg:hidden border-b border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+    <div className='h-14 lg:hidden border-b border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
       <div className='items-center relative  gap-x-xs flex h-full w-fit justify-center w-full'>
         {tabElments.map((ele) => (
           <div
@@ -14,7 +14,7 @@ function Tabs({ tabElments, slectedTab, setSelectedTab }) {
                 onClick={() => setSelectedTab(ele.text)}
                 className={`md:hover:bg-offsetPlus ${
                   slectedTab === ele.text ? 'text-textMain' : 'text-textOff'
-                } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
+                }   font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
               >
                 <div className='flex items-center leading-none justify-center gap-xs'>
                   {ele.svg}
@@ -22,7 +22,7 @@ function Tabs({ tabElments, slectedTab, setSelectedTab }) {
                 </div>
               </button>
               {slectedTab === ele.text && (
-                <div className='absolute z-30 bottom-0 left-0 right-0 h-1 rounded-t-sm bg-textMain dark:bg-textMainDark'></div>
+                <div className='absolute z-30 bottom-0 left-0 right-0 h-1 rounded-t-sm bg-textMain '></div>
               )}
             </div>
           </div>

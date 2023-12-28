@@ -24,13 +24,13 @@ function Onboarding() {
   return loading ? (
     <Loader />
   ) : (
-    <div className='h-full border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark md:bg-offset bg-background dark:bg-offsetDark'>
+    <div className='h-full border-borderMain/60  divide-borderMain/60  ring-borderMain  md:bg-offset bg-background '>
       <div className='flex h-full min-h-[100vh]'>
         <div className='lg:pr-sm lg:pb-sm lg:pt-sm grow'>
-          <div className='h-full overflow-clip bg-clip-border border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark dark:bg-offsetDark'>
+          <div className='h-full overflow-clip bg-clip-border border-borderMain/60  divide-borderMain/60  ring-borderMain  '>
             <div className='w-full h-full mx-auto  max-w-screen-md md:px-lg  px-md'>
-              <div className='md:flex items-center justify-center h-full  border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
-                <div className='rounded-lg md:border md:p-lg md:shadow-sm w-full border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
+              <div className='md:flex items-center justify-center h-full  border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
+                <div className='rounded-lg md:border md:p-lg md:shadow-sm w-full border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '>
                   <Header
                     key={step}
                     nextButtonText={

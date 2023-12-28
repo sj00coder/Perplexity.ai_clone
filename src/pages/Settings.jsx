@@ -12,7 +12,7 @@ function Setting() {
       <div className='w-[20vw]'>
         <button
           type='button'
-          className='bg-superDuper md:hover:bg-offsetPlus text-white dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10 w-100'
+          className='bg-superDuper md:hover:bg-offsetPlus text-white  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10 w-100'
           onClick={logOutAndNavigate}
         >
           <div className='flex items-center leading-none justify-start gap-xs'>

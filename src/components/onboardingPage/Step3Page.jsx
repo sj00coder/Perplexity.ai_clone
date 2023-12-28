@@ -2,10 +2,10 @@ function Step3Page() {
   return (
     <>
       <div className='mb-lg space-y-xs'>
-        <h1 className='default font-display text-2xl md:text-3xl text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+        <h1 className='default font-display text-2xl md:text-3xl text-textMain  selection:bg-superDuper selection:text-textMain'>
           Perplexity for your phone
         </h1>
-        <div className='light font-sans text-base text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+        <div className='light font-sans text-base text-textOff  selection:bg-superDuper selection:text-textMain'>
           Available for iPhone and Android
         </div>
       </div>
@@ -20,12 +20,12 @@ function Step3Page() {
               type='video/mp4'
             />
           </video>
-          <div className='mx-auto mt-lg  rounded-lg flex gap-lg items-center justify-center border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+          <div className='mx-auto mt-lg  rounded-lg flex gap-lg items-center justify-center border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
             <div className='md:text-left'>
-              <h2 className='default font-display text-lg font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+              <h2 className='default font-display text-lg font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                 Get the app now
               </h2>
-              <div className='mt-xs light font-sans text-base text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+              <div className='mt-xs light font-sans text-base text-textOff  selection:bg-superDuper selection:text-textMain'>
                 Visit the App Store, Google Play, or scan with your phone to
                 download instantly
               </div>
@@ -41,7 +41,7 @@ function Step3Page() {
                   height='50'
                   decoding='async'
                   data-nimg='1'
-                  className='mt-md dark:hidden w-[150px]'
+                  className='mt-md  w-[150px]'
                   src='/images/apple_play.svg'
                 />
                 <a
@@ -62,7 +62,7 @@ function Step3Page() {
               </div>
             </div>
             <div className='hidden md:block w-[200px]'>
-              <div className='rounded-lg overflow-hidden border shadow-sm w-full border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+              <div className='rounded-lg overflow-hidden border shadow-sm w-full border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
                 <img
                   alt='QR code for the app link'
                   loading='lazy'

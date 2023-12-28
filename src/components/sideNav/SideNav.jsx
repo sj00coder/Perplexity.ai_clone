@@ -50,15 +50,15 @@ function SideNav({ selectedNav }) {
                   className='ml-sm'
                   onClick={() => setShowNewThreadModal(true)}
                 >
-                  <div className='border rounded-full pl-md pr-sm py-sm flex flex-none justify-between items-center mx-md cursor-pointer group ring-2 ring-transparent hover:border-white hover:!ring-super transition duration-300 select-none border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
-                    <div className='text-clip overflow-hidden line-clamp-1  light font-sans text-sm font-medium text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+                  <div className='border rounded-full pl-md pr-sm py-sm flex flex-none justify-between items-center mx-md cursor-pointer group ring-2 ring-transparent hover:border-white hover:!ring-super transition duration-300 select-none border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '>
+                    <div className='text-clip overflow-hidden line-clamp-1  light font-sans text-sm font-medium text-textOff  selection:bg-superDuper selection:text-textMain'>
                       New Thread
                     </div>
-                    <div className='flex items-center space-x-two light font-sans text-base text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
-                      <div className='font-mono text-bold rounded min-w-5 h-5 flex items-center px-xs justify-center border border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+                    <div className='flex items-center space-x-two light font-sans text-base text-textOff  selection:bg-superDuper selection:text-textMain'>
+                      <div className='font-mono text-bold rounded min-w-5 h-5 flex items-center px-xs justify-center border border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
                         Ctrl
                       </div>
-                      <div className='font-mono text-xs rounded w-5 h-5 flex items-center justify-center border border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+                      <div className='font-mono text-xs rounded w-5 h-5 flex items-center justify-center border border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
                         I
                       </div>
                     </div>
@@ -72,7 +72,7 @@ function SideNav({ selectedNav }) {
                   <a
                     className={`md:hover:bg-offsetPlus ${
                       selectedNav === 'Home' ? 'text-textMain' : 'text-textOff'
-                    } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
+                    }   font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                     style={{ WebkitTapHighlightColor: 'transparent' }}
                     href='/'
                   >
@@ -81,7 +81,7 @@ function SideNav({ selectedNav }) {
                       <div className='text-align-center relative'>Home</div>
                     </div>
                   </a>
-                  <div className='absolute z-30 bg-textMain dark:bg-textMainDark'></div>
+                  <div className='absolute z-30 bg-textMain '></div>
                 </div>
               </div>
               <div className='relative  gap-x-sm  w-full px-two  justify-center'>
@@ -91,7 +91,7 @@ function SideNav({ selectedNav }) {
                       selectedNav === 'Discover'
                         ? 'text-textMain'
                         : 'text-textOff'
-                    } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
+                    }   font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                     style={{ WebkitTapHighlightColor: 'transparent' }}
                     href='/discover'
                   >
@@ -112,7 +112,7 @@ function SideNav({ selectedNav }) {
                       selectedNav === 'Library'
                         ? 'text-textMain'
                         : 'text-textOff'
-                    } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
+                    }   font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                     onClick={() => {
                       user ? navigate('/library') : setShowSignUpModal(true);
                     }}
@@ -127,7 +127,7 @@ function SideNav({ selectedNav }) {
                     </div>
                   </button>
                 </div>
-                <div className='pointer-events-none absolute right-0 md:right-md rounded p-xs bg-alert text-white top-[10px] default text-[11px] font-bold tracking-wide font-mono leading-none uppercase text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+                <div className='pointer-events-none absolute right-0 md:right-md rounded p-xs bg-alert text-white top-[10px] default text-[11px] font-bold tracking-wide font-mono leading-none uppercase text-textMain  selection:bg-superDuper selection:text-textMain'>
                   New
                 </div>
               </div>
@@ -139,7 +139,7 @@ function SideNav({ selectedNav }) {
                         selectedNav === 'AI Profile'
                           ? 'text-textMain'
                           : 'text-textOff'
-                      } dark:text-textMainDark dark:md:hover:bg-offsetPlusDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
+                      }   font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10`}
                       style={{ WebkitTapHighlightColor: 'transparent' }}
                       href='/profile'
                     >
@@ -157,7 +157,7 @@ function SideNav({ selectedNav }) {
                   <div className='px-sm md overflow-hidden transition duration-300 relative '>
                     <button
                       type='button'
-                      className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                      className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-start rounded cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
                       onClick={() => setShowSignUpModal(true)}
                     >
                       <div className='flex items-center leading-none justify-start gap-xs'>
@@ -177,7 +177,7 @@ function SideNav({ selectedNav }) {
               <div className='ml-md mt-md mr-md hidden md:block'>
                 <button
                   type='button'
-                  className='bg-super dark:bg-superDark dark:text-backgroundDark text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
+                  className='bg-super   text-white hover:opacity-80 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap flex w-full text-base px-md font-medium h-10'
                   onClick={() => {
                     setShowSignUpModal(true);
                   }}
@@ -190,13 +190,13 @@ function SideNav({ selectedNav }) {
             )}
           </div>
           <div className='flex flex-col'>
-            <div className='px-md pb-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+            <div className='px-md pb-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
               <div>
-                <div className='inline default font-sans text-sm font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+                <div className='inline default font-sans text-sm font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                   Try Pro
                 </div>
               </div>
-              <div className='light font-sans text-sm text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+              <div className='light font-sans text-sm text-textOff  selection:bg-superDuper selection:text-textMain'>
                 Upgrade to Claude-2 or GPT-4, boost your Copilot uses, and
                 upload more files.
               </div>
@@ -204,7 +204,7 @@ function SideNav({ selectedNav }) {
                 <div>
                   <button
                     type='button'
-                    className='bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark  md:hover:text-textOff md:dark:hover:text-textOffDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+                    className='bg-offsetPlus  text-textMain   md:hover:text-textOff  font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
                   >
                     <div className='flex items-center leading-none justify-center gap-xs'>
                       <ArrowUpRight
@@ -222,10 +222,10 @@ function SideNav({ selectedNav }) {
             </div>
             {user && (
               <a href='/settings'>
-                <div className='px-sm py-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
-                  <div className='flex  items-center rounded-full gap-x-sm py-xs pl-sm pr-sm border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark transition duration-300 bg-transparent md:hover:bg-offsetPlus md:dark:hover:bg-offsetPlusDark'>
+                <div className='px-sm py-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
+                  <div className='flex  items-center rounded-full gap-x-sm py-xs pl-sm pr-sm border-borderMain/60  divide-borderMain/60  ring-borderMain  transition duration-300 bg-transparent md:hover:bg-offsetPlus '>
                     <div className='relative'>
-                      <div className='aspect-square rounded-full overflow-hidden flex items-center justify-center  w-8 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-offsetPlus dark:bg-offsetPlusDark'>
+                      <div className='aspect-square rounded-full overflow-hidden flex items-center justify-center  w-8 border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-offsetPlus '>
                         <img
                           alt='User avatar'
                           className='w-full h-auto'
@@ -235,7 +235,7 @@ function SideNav({ selectedNav }) {
                     </div>
                     <div>
                       <div className='flex items-center gap-x-xs relative'>
-                        <div className='line-clamp-1 break-all default font-sans text-sm font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+                        <div className='line-clamp-1 break-all default font-sans text-sm font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                           {user?.displayName}
                         </div>
                       </div>
@@ -244,11 +244,11 @@ function SideNav({ selectedNav }) {
                 </div>
               </a>
             )}
-            <div className='flex items-center gap-x-xs my-sm pt-sm px-sm border-t border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+            <div className='flex items-center gap-x-xs my-sm pt-sm px-sm border-t border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
               <div>
                 <button
                   type='button'
-                  className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
+                  className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm px-sm font-medium h-8'
                 >
                   <div className='flex items-center leading-none justify-center gap-xs'>
                     <MobileScreenSVG classes='svg-inline--fa fa-mobile-screen fa-fw fa-1x ' />
@@ -257,7 +257,7 @@ function SideNav({ selectedNav }) {
                 </button>
               </div>
               <a
-                className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+                className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
                 target='_blank'
                 rel='noreferrer'
                 style={{ WebkitTapHighlightColor: 'transparent' }}
@@ -268,7 +268,7 @@ function SideNav({ selectedNav }) {
                 </div>
               </a>
               <a
-                className='md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
+                className='md:hover:bg-offsetPlus text-textOff  md:hover:text-textMain    font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8'
                 target='_blank'
                 rel='noreferrer'
                 style={{ WebkitTapHighlightColor: 'transparent' }}

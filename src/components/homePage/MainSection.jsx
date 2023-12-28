@@ -41,12 +41,12 @@ function MainSection() {
     <Loader />
   ) : (
     <aside className='lg:pr-sm lg:pb-sm lg:pt-sm grow'>
-      <div className='lg:rounded-lg shadow-sm md:dark:border h-full overflow-clip bg-clip-border border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-background dark:bg-backgroundDark'>
+      <div className='lg:rounded-lg shadow-sm  h-full overflow-clip bg-clip-border border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-background '>
         <div className='h-full'>
           <div className='w-full mx-auto  max-w-screen-md md:px-lg  px-md h-full'>
             <div className='relative h-full flex flex-col'>
               <Header user={user} />
-              <div className='w-full h-full grow flex items-center -mt-2xl md:mt-0 border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
+              <div className='w-full h-full grow flex items-center -mt-2xl md:mt-0 border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
                 <div className='mb-lg md:mb-xl w-full'>
                   <div className='md:text-center mb-lg pb-xs flex items-center justify-center default text-base text-textMain selection:bg-superDuper selection:text-textMain'>
                     <span className='text-4xl font-display font-regular'>
@@ -56,12 +56,12 @@ function MainSection() {
                   <NewThreadInput />
                   <div className=' mt-lg '></div>
                   <div className='mb-sm md:text-center flex items-center gap-x-xs md:justify-center'>
-                    <div className='inline default font-sans text-xs font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+                    <div className='inline default font-sans text-xs font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                       <ArrowRightToArcSVG
                         classes={'svg-inline--fa fa-arrow-right-to-arc '}
                       />
                     </div>
-                    <div className='inline  default font-sans text-xs font-medium text-textMain dark:text-textMainDark selection:bg-superDuper selection:text-textMain'>
+                    <div className='inline  default font-sans text-xs font-medium text-textMain  selection:bg-superDuper selection:text-textMain'>
                       Try<span> asking </span>
                     </div>
                   </div>

@@ -1,8 +1,8 @@
 function LikeButton() {
   return (
-    <div className='flex items-center gap-x-sm  border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
-      <div className='border-borderMain/60 dark:border-borderMainDark/80 divide-borderMain/60 dark:divide-borderMainDark/80 ring-borderMain dark:ring-borderMainDark bg-transparent'>
-        <div className='flex items-center gap-x-xs transition duration-300 select-none cursor-pointer hover:text-superAlt light font-sans text-sm font-medium text-textOff dark:text-textOffDark selection:bg-superDuper selection:text-textMain'>
+    <div className='flex items-center gap-x-sm  border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
+      <div className='border-borderMain/60  divide-borderMain/60  ring-borderMain  bg-transparent'>
+        <div className='flex items-center gap-x-xs transition duration-300 select-none cursor-pointer hover:text-superAlt light font-sans text-sm font-medium text-textOff  selection:bg-superDuper selection:text-textMain'>
           <div className=''>
             <svg
               aria-hidden='true'
